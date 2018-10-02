@@ -1,0 +1,31 @@
+version: '3'
+services:
+  web:
+    image: mvlat/web
+    restart: always
+    volumes:
+      - ${VOLUMES}/web:/usr/share/nginx/html/assets
+    expose:
+      - "80"
+    ports:
+      - "${LISTEN}:80:80"
+
+  rest:
+    image: mvlat/rest
+    restart: always
+    volumes:
+      - "${VOLUMES}/rest:/rest-data"
+    expose:
+      - "7301"
+    ports:
+      - "${LISTEN}:7301:7301"
+
+  assets:
+    image: mvlat/assets
+    restart: always
+    volumes:
+      - ${VOLUMES}/assets:/assets-data
+    expose:
+      - "7302"
+    ports:
+      - "${LISTEN}:7302:7302"
