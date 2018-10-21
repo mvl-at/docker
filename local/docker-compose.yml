@@ -29,3 +29,38 @@ services:
       - "7302"
     ports:
       - "${LISTEN}:7302:7302"
+
+  calendar:
+    image: mvlat/calendar
+    restart: always
+    volumes:
+      - ${VOLUMES}/calendar:/calendar-data
+    expose:
+      - "7303"
+    ports:
+      - "${LISTEN}:7303:7303"
+
+  sync:
+    image: gici/git-sync
+    restart: always
+    volumes:
+      - ${VOLUMES}/library:/git
+    environment:
+      - GIT_SYNC_REPO=https://github.com/mvl-at/library.git
+      - GIT_SYNC_DEST=/git
+      - GIT_SYNC_BRANCH=master
+      - GIT_SYNC_REV=FETCH_HEAD
+      - GIT_SYNC_WAIT=10
+
+  library:
+    image: klakegg/hugo:asciidoctor
+    restart: always
+    command: server
+    depends_on:
+      - sync
+    volumes:
+      - ${VOLUMES}/library:/src
+    expose:
+      - "1313"
+    ports:
+      - "${LISTEN}:1313:1313"
