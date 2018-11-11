@@ -1,0 +1,15 @@
+[submodule "build/rest"]
+	path = build/rest
+	url = https://github.com/mvl-at/rest.git
+[submodule "build/assets"]
+	path = build/assets
+	url = https://github.com/mvl-at/assets.git
+[submodule "build/library"]
+	path = build/library
+	url = https://github.com/mvl-at/library.git
+[submodule "build/calendar"]
+	path = build/calendar
+	url = https://github.com/mvl-at/calendar.git
+[submodule "build/web"]
+	path = build/web
+	url = https://github.com/mvl-at/web-client.git
