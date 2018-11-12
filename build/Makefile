@@ -27,3 +27,6 @@ push:
 	done
 
 publish: fetch build push
+
+compose:
+	cp -nr web/src/assets/* ../local/volumes/web/
