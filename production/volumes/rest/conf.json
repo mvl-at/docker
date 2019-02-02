@@ -1,0 +1,7 @@
+{
+  "host": "0.0.0.0",
+  "port": 7301,
+  "sqliteFile": "mvl.sqlite",
+  "jwtSecret": "51b84ae500b25454",
+  "jwtExpiration": 30
+}
