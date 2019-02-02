@@ -1,0 +1,41 @@
+{
+  "host": "0.0.0.0",
+  "port": 7303,
+  "restHost": "rest.mvl.at",
+  "threadType": "static",
+  "threads": 0,
+  "obm": {
+    "name": "Gerald Halper",
+    "address": "Anton Mikulcikgasse 16",
+    "telephone": "0664/2138707",
+    "email": "obmann@mvl.at",
+    "role": "obmann"
+  },
+  "kpm": {
+    "name": "Markus Nentwich",
+    "address": "Sonnenweg 12",
+    "telephone": "0699/10329882",
+    "email": "kapellmeister@mvl.at",
+    "role": "kapellmeister"
+  },
+  "king": "Arnheim",
+  "marches": [
+    "Arnheim",
+    "Koline Koline",
+    "Castaldo",
+    "Attila",
+    "Olympia",
+    "Rázně Vpřed",
+    "Florentinský",
+    "Muziky, Muziky",
+    "Slavnostní",
+    "Fanfarovy"
+  ],
+  "color": "#134474FF",
+  "calendarName": "Musikverein Leopoldsdorf",
+  "name": "Musikverein Leopoldsdorf/M.",
+  "homepage": "",
+  "address": "A-2285 Leopoldsdorf/M. Kempfendorf 2",
+  "zvr": "ZVR - Zahl: 091786949",
+  "role": "events"
+}
